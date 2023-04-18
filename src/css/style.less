@@ -1,0 +1,115 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*------------------------fonts----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+/*------------------------Variables----------------------*/
+
+@color-bg: #160054;
+@color-white: #fff;
+@color-green: #D5FB00;
+@color-purple: #4B2D9F;
+
+/*------------------------Mixins----------------------*/
+
+.nun(){
+    font-family: Nunito, sans-serif;
+}
+
+/*------------------------Revers----------------------*/
+
+html, body, .outer {
+        height: 100%;
+        margin: 0;
+}
+
+.outer {
+    overflow: auto;
+}
+
+.outer, .inner {
+    transform: scaleY(-1);
+}
+
+/*------------------------Styles----------------------*/
+
+
+body {
+    counter-reset: i 0;
+    background-color: @color-bg;
+    overflow-x: hidden;
+    .nun();
+}
+.container{
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.header{
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    top: -5%;
+    &-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:10%;
+        &-ul{
+            list-style: none;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            &-li{
+                &__a{
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: @color-white;
+                }
+            }
+        }
+    }
+}
+
+.btn{
+    background-color: @color-green;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px;
+    color: @color-purple;
+    border-radius: 4px;
+}
+
+
+.hero-section__bg{
+    width: 100%;
+}
+#hero-section{
+    z-index: 5000 !important;
+    display: flex;
+    flex-direction: column;
+}
+.hero-section__stars{
+    width: 100%;
+}
+.balloon{
+    width: 100%;
+    // left: 41%;
+    // bottom: 30%;
+    z-index: 5000 !important;
+}
+.hero-svg{
+    width: 100%;
+    z-index: 5000 !important;
+}
+
+
